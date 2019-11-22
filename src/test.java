@@ -1,5 +1,6 @@
 public class test {
     public static void main(String[] args) {
-        System.out.println((4 + 5) / 10);
+        int[] a = new int[10];
+        System.out.println((int)'a');
     }
 }

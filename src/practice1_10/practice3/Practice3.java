@@ -1,25 +1,36 @@
 package practice1_10.practice3;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Practice3 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.lengthOfLongestSubstring("abcabcbb");
+        System.out.println(solution.lengthOfLongestSubstring("abcabcbb"));
     }
 }
 
 
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        Map<Character,Character> map = new LinkedHashMap<>();
-        for (int i = 0;i<s.length();i++){
-            char c = s.charAt(i);
-            if(map.containsKey(c)){
-
+        Integer maxLength = 0;
+        for(int i = 0;i<s.length();i++){
+            int length = findMaxLength(i,s);
+            if(length > maxLength){
+                maxLength = length;
             }
         }
-        return 0;
+        return maxLength;
+    }
+
+    int findMaxLength(int index,String s){
+        Set<Character> charSet = new HashSet<>();
+        for (int i = index;i<s.length();i++){
+            if(charSet.contains(s.charAt(i))){
+                return charSet.size();
+            }
+            charSet.add(s.charAt(i));
+        }
+        return charSet.size();
     }
 }
+
