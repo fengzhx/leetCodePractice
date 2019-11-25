@@ -1,9 +1,6 @@
 package practice51_60.practice53;
 
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Practice53 {
     public static void main(String[] args) {
@@ -15,14 +12,27 @@ public class Practice53 {
 class Solution {
     public int maxSubArray(int[] nums) {
         Map<List<Integer>, Integer> map = new LinkedHashMap<>();
-        int max = -100000;
+        int max = nums[0];
         for(int i = 0;i<nums.length;i++){
+            int numsI = nums[i];
+            if(max < numsI){
+                max = numsI;
+            }
+            Map<List<Integer>, Integer> mapTemp = new LinkedHashMap<>();
+            for (List<Integer> list : map.keySet()){
+                int tempMax = map.get(list) + numsI;
+                if(max < tempMax){
+                    max = tempMax;
+                }
+                List<Integer> listTemp = new LinkedList<>(list);
+                listTemp.add(i);
+                mapTemp.put(listTemp,tempMax);
+            }
+            map = mapTemp;
             List<Integer> temp = new LinkedList<>();
             temp.add(i);
-            for (List list : map.keySet()){
-                
-            }
+            map.put(temp,numsI);
         }
-        return 0;
+        return max;
     }
 }
