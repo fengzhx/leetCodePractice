@@ -5,12 +5,13 @@ import java.util.List;
 public class Practice22 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.generateParenthesis(1));
+        System.out.println(solution.generateParenthesis(3));
     }
 }
 
 class Solution {
     public List<String> generateParenthesis(int n) {
+
         return null;
     }
 }
