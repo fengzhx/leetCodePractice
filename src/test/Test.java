@@ -1,14 +1,15 @@
 package test;
 
+import java.util.*;
+
 public class Test {
     public static void main(String[] args) {
-        Boolean[] booleans = new Boolean[2];
-        System.out.println(test(booleans));
-        System.out.println(booleans[0]);
-        System.out.println(booleans[1]);
-    }
+        Set<List<Integer>> result = new LinkedHashSet<>();
+        List<Integer> temp = new LinkedList<Integer>(){{add(1);add(2);}};
+        result.add(temp);
+        List<Integer> temp2 = new LinkedList<Integer>(){{add(1);add(2);}};
+        result.add(temp2);
+        System.out.println(result);
 
-    public static boolean test(Boolean[] booleans) {
-        return booleans[0] = false;
     }
 }
