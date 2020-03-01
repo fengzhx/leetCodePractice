@@ -1,15 +1,24 @@
 package test;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
-        Set<List<Integer>> result = new LinkedHashSet<>();
-        List<Integer> temp = new LinkedList<Integer>(){{add(1);add(2);}};
-        result.add(temp);
-        List<Integer> temp2 = new LinkedList<Integer>(){{add(1);add(2);}};
-        result.add(temp2);
-        System.out.println(result);
+        Test test = new Test();
+        boolean b = test.judgeChange("hit", "hot");
+        System.out.println(b);
+}
 
+    public boolean judgeChange(String s1,String s2){
+        int change = 0;
+        for(int i = 0;i<s1.length();i++){
+            System.out.println();
+            if(s1.indexOf(i) != s2.indexOf(i)){
+                change++;
+            }
+        }
+        return change == 1;
     }
 }
