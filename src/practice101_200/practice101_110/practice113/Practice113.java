@@ -1,6 +1,5 @@
 package practice101_200.practice101_110.practice113;
 
-import test.GenerateTree;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,11 +12,6 @@ class TreeNode {
 }
 
 public class Practice113 {
-    public static void main(String[] args) {
-        GenerateTree<Integer> generateTree = new GenerateTree<>(new Integer[]{5,4,8,11,null,13,4,7,2,null,null,5,1});
-        test.TreeNode root = generateTree.getRoot();
-        System.out.println(root);
-    }
 }
 
 class Solution {
