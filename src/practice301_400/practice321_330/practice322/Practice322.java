@@ -1,4 +1,4 @@
-package practice321_330.practice322;
+package practice301_400.practice321_330.practice322;
 
 import java.util.LinkedList;
 import java.util.List;

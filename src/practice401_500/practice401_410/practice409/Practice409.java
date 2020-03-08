@@ -1,4 +1,4 @@
-package practice401_410.practice409;
+package practice401_500.practice401_410.practice409;
 
 public class Practice409 {
     public static void main(String[] args) {

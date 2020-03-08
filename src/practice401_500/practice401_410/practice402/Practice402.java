@@ -1,4 +1,4 @@
-package practice401_410.practice402;
+package practice401_500.practice401_410.practice402;
 
 import java.util.LinkedList;
 

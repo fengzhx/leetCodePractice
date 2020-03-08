@@ -1,4 +1,4 @@
-package practice371_380.practice376;
+package practice301_400.practice371_380.practice376;
 
 public class Practice376 {
     public static void main(String[] args) {

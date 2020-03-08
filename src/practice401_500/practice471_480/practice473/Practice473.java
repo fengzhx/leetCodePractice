@@ -1,4 +1,4 @@
-package practice471_480.practice473;
+package practice401_500.practice471_480.practice473;
 
 
 import sort.Sort;
