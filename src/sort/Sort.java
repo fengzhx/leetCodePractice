@@ -1,6 +1,49 @@
 package sort;
 
 public class Sort {
+    /**
+     * 插入排序
+     */
+    public static void insertSort(int[] nums){
+        if(nums.length == 0){
+            return;
+        }
+        for(int i = 0;i<nums.length;i++){
+            int currentNum = nums[i];
+            for(int j = i - 1;j>=0;j--){
+                if(currentNum < nums[j]){
+                    nums[j+1] = nums[j];
+                }else if(currentNum >= nums[j]){
+                    nums[++j] = currentNum;
+                    break;
+                }
+                if(j == 0){
+                    nums[0] = currentNum;
+                }
+            }
+        }
+    }
+
+    /**
+     * 选择排序
+     */
+    public static void selectSort(int[] nums){
+        if(nums.length == 0){
+            return;
+        }
+        for(int i = 0;i<nums.length;i++){
+            int index = i;
+            for(int j = i;j<nums.length;j++){
+                if(nums[index] < nums[j]){
+                    index = j;
+                }
+            }
+            int temp = nums[i];
+            nums[i] = nums[index];
+            nums[index] = temp;
+        }
+    }
+
     public static void quickSort(int[] nums,int begin,int end){
         if(begin >= end){
             return;

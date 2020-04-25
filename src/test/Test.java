@@ -1,22 +1,11 @@
 package test;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Test {
     public static void main(String[] args) {
-        Queue<TreeNode> temp = new LinkedList<>();
-        temp.offer(null);
-        temp.offer(null);
-        System.out.println(temp);
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(1,0);
     }
-
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
 }
