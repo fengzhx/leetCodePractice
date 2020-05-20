@@ -1,13 +1,12 @@
 package designParttern.factoryParttern;
 
-public class GetUserTree implements GenerateTree {
+public class GetUserTree<T extends CommonTreeNode<T>> implements GenerateTree<T> {
     @Override
-    public UserTree getTree() {
+    public T getTree() {
         UserTree userTree = new UserTree();
         userTree.setAge(1);
         userTree.setId(2L);
-        return userTree;
+        T t = (T) userTree;
+        return t;
     }
-
-
 }

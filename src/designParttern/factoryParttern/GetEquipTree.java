@@ -1,11 +1,11 @@
 package designParttern.factoryParttern;
 
-public class GetEquipTree implements GenerateTree {
+public class GetEquipTree<T extends CommonTreeNode<T>> implements GenerateTree<T> {
     @Override
-    public EquipTree getTree() {
+    public T getTree() {
         EquipTree equipTree = new EquipTree();
         equipTree.setId(1L);
         equipTree.setEquipName("设备");
-        return equipTree;
+        return (T) equipTree;
     }
 }
